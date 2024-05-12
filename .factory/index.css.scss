@@ -228,6 +228,7 @@ details {
         right: 0 solid transparent;
         top: 4px solid transparent;
       }
+      color: var(--color-2);
       content: "";
       height: 0;
       left: 0;
@@ -259,9 +260,9 @@ details {
       }
     }
     ul {
-      margin: {
-        left: 1.25rem;
-        top: 2px;
+      margin-left: 1.25rem;
+      li {
+        border-width: 0;
       }
     }
     + [role='tree'] {
@@ -714,7 +715,7 @@ body {
                 padding: 0 0 5px;
               }
               + div {
-                margin-top: 10px;
+                margin-top: 15px;
               }
             }
           }
@@ -722,7 +723,7 @@ body {
         > main {
           background: var(--fill-2);
           border-radius: 8px;
-          border: 2px solid #89a;
+          border: 2px solid var(--stroke-2);
           flex: 1;
           margin: 0;
           min-width: 0;
@@ -739,7 +740,6 @@ body {
             }
             > footer {
               background: #ded;
-              background-clip: padding-box;
               border-top: 1px dotted var(--stroke);
               color: #666;
               display: flex;
@@ -778,18 +778,27 @@ body {
             }
           }
           > p {
-            border: 0 dotted var(--stroke);
-            border-width: 1px 0;
-            color: #357;
-            font: {
-              size: 85%;
-              weight: bold;
+            &[role='alert'] {
+              margin: 13px;
             }
-            letter-spacing: 0.2em;
-            line-height: 2em;
-            margin: 0;
-            padding: 5px 28px 5px 43px;
-            text-transform: uppercase;
+            &:not([role='alert']) {
+              border: 0 dotted var(--stroke);
+              border-width: 1px 0;
+              color: #357;
+              font: {
+                size: 85%;
+                weight: bold;
+              }
+              letter-spacing: 0.2em;
+              line-height: 2em;
+              margin: 0;
+              padding: 5px 28px 5px 43px;
+              text-transform: uppercase;
+              &:empty {
+                height: 13px;
+                padding: 0;
+              }
+            }
           }
         }
       }

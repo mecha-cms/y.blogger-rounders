@@ -6,7 +6,10 @@
     li {
       &::after,
       &::before {
-        border-color: var(--stroke, #000);
+        border: {
+          color: var(--stroke, #000);
+          style: dotted;
+        }
       }
       &:last-child {
         &::after {

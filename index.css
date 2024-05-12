@@ -260,6 +260,7 @@ details > summary::before {
   border-left: 8px solid;
   border-right: 0 solid transparent;
   border-top: 4px solid transparent;
+  color: var(--color-2);
   content: "";
   height: 0;
   left: 0;
@@ -286,7 +287,9 @@ details[role=tree][open] > summary {
 }
 details[role=tree] ul {
   margin-left: 1.25rem;
-  margin-top: 2px;
+}
+details[role=tree] ul li {
+  border-width: 0;
 }
 details[role=tree] + [role=tree] {
   border: 0 dotted var(--stroke-1);
@@ -578,6 +581,7 @@ search p {
 [role=doc-toc] [role=doc-pagelist] li::after,
 [role=doc-toc] [role=doc-pagelist] li::before {
   border-color: var(--stroke, #000);
+  border-style: dotted;
 }
 [role=doc-toc] [role=doc-pagelist] li:last-child::after {
   background: var(--fill-2, #fff);
@@ -759,13 +763,13 @@ body > div > nav + div > aside > div > div h3 {
 }
 body > div > header + div > aside > div > div + div,
 body > div > nav + div > aside > div > div + div {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 body > div > header + div > main,
 body > div > nav + div > main {
   background: var(--fill-2);
   border-radius: 8px;
-  border: 2px solid #89a;
+  border: 2px solid var(--stroke-2);
   flex: 1;
   margin: 0;
   min-width: 0;
@@ -790,7 +794,6 @@ body > div > nav + div > main > article > div::after {
 body > div > header + div > main > article > footer,
 body > div > nav + div > main > article > footer {
   background: #ded;
-  background-clip: padding-box;
   border-top: 1px dotted var(--stroke);
   color: #666;
   display: flex;
@@ -833,8 +836,12 @@ body > div > nav + div > main > article + nav {
   margin: 0;
   padding: 5px 13px;
 }
-body > div > header + div > main > p,
-body > div > nav + div > main > p {
+body > div > header + div > main > p[role=alert],
+body > div > nav + div > main > p[role=alert] {
+  margin: 13px;
+}
+body > div > header + div > main > p:not([role=alert]),
+body > div > nav + div > main > p:not([role=alert]) {
   border: 0 dotted var(--stroke);
   border-width: 1px 0;
   color: #357;
@@ -845,6 +852,11 @@ body > div > nav + div > main > p {
   margin: 0;
   padding: 5px 28px 5px 43px;
   text-transform: uppercase;
+}
+body > div > header + div > main > p:not([role=alert]):empty,
+body > div > nav + div > main > p:not([role=alert]):empty {
+  height: 13px;
+  padding: 0;
 }
 
 @media (max-width: 680px) {
@@ -875,7 +887,10 @@ body > div > nav + div > main > p {
   --fill-1: #456;
   --fill-1: #456;
   --fill-2: #fff;
+  --fill-alert: rgba(204, 204, 204, 0.5);
   --fill: #aba;
+  --stroke-1: #ccc;
+  --stroke-2: #89a;
+  --stroke-alert: rgba(0, 0, 0, 0.5);
   --stroke: #bbb;
-  --stroke-1: #eee;
 }
