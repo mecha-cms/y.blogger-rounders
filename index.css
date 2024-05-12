@@ -1,0 +1,881 @@
+/*! Rounders Blogger template by Douglas Bowman <http://www.stopdesign.com> */
+*,
+::after,
+::before {
+  background: 0 0;
+  border: 0;
+  box-sizing: border-box;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  text-decoration: none;
+  word-wrap: break-word;
+}
+
+::-moz-focus-inner {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+:where(address,
+  article,
+  aside,
+  blockquote,
+  dd,
+  details,
+  div,
+  dl,
+  dt,
+  fieldset,
+  figure,
+  footer,
+  form,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header,
+  hgroup,
+  hr,
+  main,
+  nav,
+  ol,
+  p,
+  pre,
+  search,
+  section,
+  table,
+  ul) + :where(address,
+  article,
+  aside,
+  blockquote,
+  dd,
+  details,
+  div,
+  dl,
+  dt,
+  fieldset,
+  figure,
+  footer,
+  form,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header,
+  hgroup,
+  hr,
+  main,
+  nav,
+  ol,
+  p,
+  pre,
+  search,
+  section,
+  table,
+  ul) {
+  margin-top: 0.75rem;
+}
+
+li:where(:not(:first-child)) > :where(address,
+  article,
+  aside,
+  blockquote,
+  dd,
+  details,
+  div,
+  dl,
+  dt,
+  fieldset,
+  figure,
+  footer,
+  form,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header,
+  hgroup,
+  hr,
+  main,
+  nav,
+  p,
+  pre,
+  search,
+  section,
+  table):where(:first-child) {
+  margin-top: 0.75rem;
+}
+
+:root {
+  background: var(--fill);
+  color: var(--color);
+  font: 400 normal 13px/1.5 var(--face);
+}
+
+a,
+[role=link] {
+  color: var(--color-link);
+}
+a img,
+[role=link] img {
+  border: 1px solid;
+  border-color: var(--stroke);
+  padding: 4px;
+}
+a:focus,
+[role=link]:focus,
+a:hover,
+[role=link]:hover {
+  color: var(--color-link-1);
+  text-decoration: underline;
+}
+a:focus:visited,
+[role=link]:focus:visited,
+a:hover:visited,
+[role=link]:hover:visited {
+  color: var(--color-link-2);
+}
+a[aria-current],
+[aria-current][role=link],
+a[aria-disabled],
+[aria-disabled][role=link] {
+  color: inherit;
+  cursor: inherit;
+  text-decoration: none;
+}
+a[aria-current]:visited,
+[aria-current][role=link]:visited,
+a[aria-disabled]:visited,
+[aria-disabled][role=link]:visited {
+  color: inherit;
+}
+
+b,
+dt,
+legend,
+strong,
+th {
+  font-weight: bold;
+}
+
+dfn,
+em,
+i,
+var {
+  font-style: italic;
+}
+
+button,
+[role=button],
+input[type=button],
+input[type=reset],
+input[type=submit],
+input,
+select,
+textarea {
+  accent-color: var(--color-link);
+  background: var(--fill-input, var(--fill));
+  border: 1px solid;
+  border-color: var(--stroke-input, var(--stroke));
+  color: var(--color-input);
+  display: inline-block;
+  height: 2rem;
+  line-height: calc(2rem - 2px);
+  padding: 0 0.5rem;
+  vertical-align: middle;
+  width: 12rem;
+}
+
+select,
+input[type=checkbox],
+input[type=file],
+input[type=radio],
+input[type=range],
+input[type=color],
+input[type=image],
+label,
+details > summary {
+  cursor: pointer;
+  user-select: none;
+}
+
+del,
+[role=deletion],
+s {
+  text-decoration: line-through;
+}
+
+[role=doc-endnotes],
+small,
+sub,
+sup {
+  font-size: 0.79em;
+}
+
+ins,
+[role=insertion],
+u {
+  text-decoration: underline;
+}
+
+abbr {
+  cursor: help;
+}
+
+blockquote {
+  font-size: 1.185rem;
+  margin-left: 1.15rem;
+  margin-right: 1.15rem;
+}
+
+caption,
+figcaption {
+  margin: 1rem 0 0;
+  text-align: center;
+}
+
+code {
+  font-family: var(--face-2);
+}
+
+details > summary {
+  display: block;
+  padding-left: 1.15rem;
+  position: relative;
+  text-decoration: none !important;
+}
+details > summary::before {
+  border-bottom: 4px solid transparent;
+  border-left: 8px solid;
+  border-right: 0 solid transparent;
+  border-top: 4px solid transparent;
+  content: "";
+  height: 0;
+  left: 0;
+  margin-top: -4px;
+  position: absolute;
+  top: 50%;
+  width: 0;
+}
+details[open] > summary {
+  margin-bottom: 1.15rem;
+}
+details[open] > summary::before {
+  border-bottom: 0 solid transparent;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 8px solid;
+  margin-top: -3px;
+}
+details[role=tree] {
+  padding: 3px 0;
+}
+details[role=tree][open] > summary {
+  margin-bottom: 0;
+}
+details[role=tree] ul {
+  margin-left: 1.25rem;
+  margin-top: 2px;
+}
+details[role=tree] + [role=tree] {
+  border: 0 dotted var(--stroke-1);
+  border-top-width: 1px;
+  margin-top: 0;
+}
+
+ol,
+ul {
+  margin-left: 2rem;
+}
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin-left: 1.15rem;
+}
+
+dl {
+  margin-left: 1.15rem;
+  margin-right: 1.15rem;
+}
+
+fieldset {
+  border: 1px solid;
+  border-color: var(--stroke);
+  padding: 1.15rem;
+}
+
+figure {
+  text-align: center;
+}
+figure img {
+  display: block;
+}
+
+form > p > label {
+  line-height: calc(2rem - 2px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 310%;
+}
+
+h2 {
+  font-size: 250%;
+}
+
+h3 {
+  font-size: 200%;
+}
+
+h4 {
+  font-size: 160%;
+}
+
+h5 {
+  font-size: 130%;
+}
+
+h6 {
+  font-size: 110%;
+}
+
+hr {
+  border: 0;
+  border-top: 1px dotted;
+  border-color: var(--stroke);
+}
+
+legend {
+  padding: 0 0.5rem;
+}
+
+mark,
+[role=mark] {
+  background: var(--fill-mark);
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+ol {
+  list-style: decimal;
+}
+
+pre code {
+  background: var(--fill-code, var(--color));
+  color: var(--color-code, var(--fill));
+  display: block;
+  overflow: auto;
+  padding: 0.5rem 0.75rem;
+  white-space: pre-wrap;
+}
+
+sub,
+sup {
+  line-height: 0;
+}
+
+sub {
+  vertical-align: sub;
+}
+
+sup {
+  vertical-align: super;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+table caption {
+  caption-side: bottom;
+}
+table td,
+table th {
+  border: 1px solid;
+  border-color: var(--stroke);
+  padding: 0.25rem 0.5rem;
+  vertical-align: top;
+}
+
+ul {
+  list-style: disc;
+}
+
+audio,
+iframe,
+video {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+button,
+[role=button],
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  background: var(--fill-button, var(--fill));
+  border-width: 0;
+  color: var(--color-button) !important;
+  cursor: pointer;
+  line-height: 2rem;
+  padding-left: 0.65rem;
+  padding-right: 0.65rem;
+  text-align: center;
+  text-decoration: none !important;
+  width: auto;
+}
+button:not(:focus-visible),
+[role=button]:not(:focus-visible),
+input[type=button]:not(:focus-visible),
+input[type=reset]:not(:focus-visible),
+input[type=submit]:not(:focus-visible) {
+  outline: 1px solid;
+  outline-color: var(--stroke-button);
+  outline-offset: -3px;
+}
+
+input[type=color],
+input[type=image] {
+  height: 2.25rem;
+  padding: 0;
+  width: 2.25rem;
+}
+input[type=image] {
+  height: auto;
+  width: auto;
+}
+input[type=checkbox],
+input[type=radio] {
+  height: 1rem;
+  width: 1rem;
+}
+input[type=checkbox],
+input[type=file],
+input[type=image],
+input[type=radio],
+input[type=range] {
+  background: 0 0;
+  border: 0;
+  padding: 0;
+}
+
+::-moz-color-swatch {
+  border: 0;
+}
+
+::-webkit-color-swatch {
+  border: 0;
+}
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+textarea {
+  height: auto;
+  line-height: inherit;
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
+  resize: vertical;
+}
+
+:disabled,
+[role=button]:not(:any-link) {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+[role=status] {
+  color: var(--color-2);
+}
+
+[role=alert] {
+  background: var(--fill-alert);
+  border: 1px solid;
+  border-color: var(--stroke-alert);
+  padding: 0.25rem 0.75rem;
+  text-align: center;
+}
+[role=alert] a,
+[role=alert] [role=link] {
+  text-decoration: underline;
+}
+
+.comments,
+.comments-body,
+.comments-footer,
+.form-comment {
+  margin-top: 1.15rem;
+}
+
+.comments h3,
+.comments h4 {
+  color: var(--color-title);
+  font-size: 125%;
+}
+
+.comment-header .comment-author {
+  color: inherit;
+  font: inherit;
+  font-weight: bold;
+}
+
+.form-comment p input + br + small,
+.form-comment p select + br + small,
+.form-comment p textarea + br + small {
+  color: var(--color-2);
+}
+
+search {
+  display: block;
+}
+search input {
+  flex: 1;
+  min-width: 0;
+}
+search input + button,
+search input + input[type=button],
+search input + input[type=reset],
+search input + input[type=submit],
+search input + [role=button] {
+  flex: initial;
+}
+search p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+[role=doc-toc] [role=heading] {
+  padding-left: 1.15rem;
+}
+[role=doc-toc] [role=doc-pagelist] li::after,
+[role=doc-toc] [role=doc-pagelist] li::before {
+  border-color: var(--stroke, #000);
+}
+[role=doc-toc] [role=doc-pagelist] li:last-child::after {
+  background: var(--fill-2, #fff);
+}
+
+body > div {
+  margin: 0 auto;
+  padding: 20px;
+  width: 780px;
+}
+body > div > footer {
+  background: var(--fill-1);
+  border-radius: 8px;
+  color: var(--color-1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 15px 0 0;
+  padding: 18px 45px;
+}
+body > div > footer a,
+body > div > footer [role=link] {
+  color: #ded;
+}
+body > div > footer p {
+  margin: 0;
+}
+body > div > footer p:only-child {
+  flex: 1;
+  text-align: center;
+}
+body > div > header {
+  background: var(--fill-1);
+  color: var(--color-1);
+  padding: 18px 45px;
+  border-radius: 8px;
+  margin: 0 0 15px;
+}
+body > div > header h1 {
+  font-size: 200%;
+  line-height: 1.2em;
+}
+body > div > header h1 a,
+body > div > header h1 [role=link] {
+  color: inherit;
+}
+body > div > header h1 a:focus,
+body > div > header h1 [role=link]:focus,
+body > div > header h1 a:hover,
+body > div > header h1 [role=link]:hover {
+  color: inherit;
+  text-decoration: none;
+}
+body > div > header h1 a:focus:visited,
+body > div > header h1 [role=link]:focus:visited,
+body > div > header h1 a:hover:visited,
+body > div > header h1 [role=link]:hover:visited {
+  color: inherit;
+}
+body > div > header h1 + p {
+  margin: 5px 0 0;
+}
+body > div > nav {
+  border-bottom: 1px dotted;
+  border-color: var(--stroke);
+  font-size: 100%;
+  line-height: 2.7rem;
+  margin: 0;
+  text-align: center;
+}
+body > div > nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body > div > nav > ul > li > a,
+body > div > nav > ul > li > [role=link] {
+  display: block;
+  font-weight: bold;
+  padding: 0 1.15rem;
+}
+body > div > nav > ul > li > a:focus,
+body > div > nav > ul > li > [role=link]:focus,
+body > div > nav > ul > li > a:hover,
+body > div > nav > ul > li > [role=link]:hover {
+  text-decoration: none;
+}
+body > div > header + div,
+body > div > nav + div {
+  display: flex;
+  gap: 15px;
+  margin: 0;
+}
+body > div > header + div > aside,
+body > div > nav + div > aside {
+  font-size: 97%;
+  margin: 0;
+  width: 240px;
+}
+body > div > header + div > aside > div,
+body > div > nav + div > aside > div {
+  background: var(--fill-2);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+body > div > header + div > aside > div:first-child,
+body > div > nav + div > aside > div:first-child {
+  background: #cdc;
+  color: #345;
+}
+body > div > header + div > aside > div:first-child li,
+body > div > nav + div > aside > div:first-child li {
+  border-color: #9b9;
+}
+body > div > header + div > aside > div::after,
+body > div > nav + div > aside > div::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+body > div > header + div > aside > div li [role=status]::after,
+body > div > header + div > aside > div summary [role=status]::after,
+body > div > nav + div > aside > div li [role=status]::after,
+body > div > nav + div > aside > div summary [role=status]::after {
+  content: ")";
+}
+body > div > header + div > aside > div li [role=status]::before,
+body > div > header + div > aside > div summary [role=status]::before,
+body > div > nav + div > aside > div li [role=status]::before,
+body > div > nav + div > aside > div summary [role=status]::before {
+  content: "(";
+}
+body > div > header + div > aside > div li,
+body > div > nav + div > aside > div li {
+  padding: 3px 0 3px 16px;
+}
+body > div > header + div > aside > div li + li,
+body > div > nav + div > aside > div li + li {
+  border: 0 dotted var(--stroke-1);
+  border-top-width: 1px;
+}
+body > div > header + div > aside > div ul,
+body > div > nav + div > aside > div ul {
+  list-style: none;
+  margin-left: 0;
+}
+body > div > header + div > aside > div ul li,
+body > div > nav + div > aside > div ul li {
+  background: url("//www.blogblog.com/rounders/icon_arrow_sm.gif") no-repeat 0 50%;
+}
+body > div > header + div > aside > div > h3,
+body > div > nav + div > aside > div > h3 {
+  border-bottom: 1px dotted #9b9;
+  font-size: 115%;
+  margin: 0 0 2px;
+  padding: 0 0 5px;
+}
+body > div > header + div > aside > div > h3 + [role=tree],
+body > div > header + div > aside > div > h3 + ol,
+body > div > header + div > aside > div > h3 + ul,
+body > div > nav + div > aside > div > h3 + [role=tree],
+body > div > nav + div > aside > div > h3 + ol,
+body > div > nav + div > aside > div > h3 + ul {
+  margin-top: 0;
+}
+body > div > header + div > aside > div + div,
+body > div > nav + div > aside > div + div {
+  margin-top: 15px;
+}
+body > div > header + div > aside > div > div h3,
+body > div > nav + div > aside > div > div h3 {
+  border-bottom: 1px dotted #9b9;
+  font-size: 115%;
+  margin: 0 0 2px;
+  padding: 0 0 5px;
+}
+body > div > header + div > aside > div > div + div,
+body > div > nav + div > aside > div > div + div {
+  margin-top: 10px;
+}
+body > div > header + div > main,
+body > div > nav + div > main {
+  background: var(--fill-2);
+  border-radius: 8px;
+  border: 2px solid #89a;
+  flex: 1;
+  margin: 0;
+  min-width: 0;
+}
+body > div > header + div > main > article,
+body > div > nav + div > main > article {
+  border: 0 dotted var(--stroke);
+  border-width: 0 1px;
+  margin: 0 13px;
+}
+body > div > header + div > main > article > div,
+body > div > nav + div > main > article > div {
+  margin: 0;
+  padding: 10px 14px 13px 29px;
+}
+body > div > header + div > main > article > div::after,
+body > div > nav + div > main > article > div::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+body > div > header + div > main > article > footer,
+body > div > nav + div > main > article > footer {
+  background: #ded;
+  background-clip: padding-box;
+  border-top: 1px dotted var(--stroke);
+  color: #666;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 2px 14px 4px 29px;
+}
+body > div > header + div > main > article > footer a[href$="#comments"],
+body > div > header + div > main > article > footer [href$="#comments"][role=link],
+body > div > nav + div > main > article > footer a[href$="#comments"],
+body > div > nav + div > main > article > footer [href$="#comments"][role=link] {
+  background: url("//www.blogblog.com/rounders/icon_comment.gif") no-repeat 0 50%;
+  display: inline-block;
+  padding: 0 0 0 14px;
+}
+body > div > header + div > main > article > footer p,
+body > div > nav + div > main > article > footer p {
+  margin: 0;
+}
+body > div > header + div > main > article > header,
+body > div > nav + div > main > article > header {
+  background: url("//www.blogblog.com/rounders/icon_arrow.gif") no-repeat 10px 50%;
+  border-bottom: 1px dotted var(--stroke);
+  padding: 2px 14px 2px 29px;
+}
+body > div > header + div > main > article > header h2,
+body > div > header + div > main > article > header h3,
+body > div > nav + div > main > article > header h2,
+body > div > nav + div > main > article > header h3 {
+  font-size: 135%;
+}
+body > div > header + div > main > article + nav,
+body > div > nav + div > main > article + nav {
+  border: 0 dotted var(--stroke);
+  border-top-width: 1px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 2em;
+  margin: 0;
+  padding: 5px 13px;
+}
+body > div > header + div > main > p,
+body > div > nav + div > main > p {
+  border: 0 dotted var(--stroke);
+  border-width: 1px 0;
+  color: #357;
+  font-size: 85%;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  line-height: 2em;
+  margin: 0;
+  padding: 5px 28px 5px 43px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 680px) {
+  body > div {
+    width: auto;
+  }
+  body > div > footer {
+    padding: 0;
+  }
+  body > div > header + div,
+  body > div > nav + div {
+    flex-direction: column;
+  }
+  body > div > header + div > aside,
+  body > div > nav + div > aside {
+    width: auto;
+  }
+}
+.skin\:1 {
+  --color-1: #fff;
+  --color-1: #fff;
+  --color-2: #888;
+  --color-link-1: #c63;
+  --color-link-2: #666;
+  --color-link: #258;
+  --color: #333;
+  --face: "Trebuchet MS", Trebuchet, sans-serif;
+  --fill-1: #456;
+  --fill-1: #456;
+  --fill-2: #fff;
+  --fill: #aba;
+  --stroke: #bbb;
+  --stroke-1: #eee;
+}
