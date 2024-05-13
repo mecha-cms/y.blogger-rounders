@@ -149,6 +149,7 @@ li {
   background: var(--fill-input, var(--fill));
   border: 1px solid;
   border-color: var(--stroke-input, var(--stroke));
+  border-radius: 4px;
   color: var(--color-input);
   display: inline-block;
   height: 2rem;
@@ -177,6 +178,11 @@ li {
 
 a {
   @extend %a;
+  &[rel='author'] {
+    background: transparent var(--icon-author) no-repeat 0 50%;
+    display: inline-block;
+    padding: 0 0 0 14px;
+  }
 }
 
 abbr {
@@ -206,7 +212,7 @@ figcaption {
 }
 
 code {
-  font-family: var(--face-2);
+  font-family: var(--face-1);
 }
 
 del,
@@ -289,18 +295,18 @@ var {
   @extend %i;
 }
 
+dl {
+  margin: {
+    left: 1.15rem;
+    right: 1.15rem;
+  }
+}
+
 ol,
 ul {
   margin-left: 2rem;
   & & {
     margin-left: 1.15rem;
-  }
-}
-
-dl {
-  margin: {
-    left: 1.15rem;
-    right: 1.15rem;
   }
 }
 
@@ -314,6 +320,10 @@ figure {
   text-align: center;
   img {
     display: block;
+    margin: {
+      left: auto;
+      right: auto;
+    }
   }
 }
 
@@ -359,7 +369,6 @@ h6 {
 }
 
 hr {
-  border: 0;
   border: {
     top: 1px dotted;
     color: var(--stroke);
@@ -435,6 +444,7 @@ ul {
 
 audio,
 iframe,
+picture,
 video {
   display: block;
   height: auto;
@@ -453,6 +463,7 @@ button {
   border-width: 0;
   color: var(--color-button) !important;
   cursor: pointer;
+  font-weight: bold;
   line-height: 2rem;
   padding: {
     left: 0.65rem;
@@ -461,11 +472,6 @@ button {
   text-align: center;
   text-decoration: none !important;
   width: auto;
-  &:not(:focus-visible) {
-    outline: 1px solid;
-    outline-color: var(--stroke-button);
-    outline-offset: -3px;
-  }
 }
 
 input {
@@ -561,14 +567,16 @@ textarea {
 @import './_/x/alert';
 @import './_/x/comment';
 @import './_/x/markdown';
+@import './_/x/pass';
 @import './_/x/search';
 @import './_/x/t-o-c';
+@import './_/x/user';
 
 body {
   > div {
     margin: 0 auto;
-    padding: 20px;
-    width: 780px;
+    padding: 18px;
+    width: 776px;
     > footer {
       background: var(--fill-1);
       border-radius: 8px;
@@ -585,7 +593,7 @@ body {
         margin: 0;
         &:only-child {
           flex: 1;
-          text-align: center;
+          text-align: right;
         }
       }
     }
@@ -615,18 +623,14 @@ body {
       }
     }
     > nav {
-      border: {
-        bottom: 1px dotted;
-        color: var(--stroke);
-      }
-      font-size: 100%;
-      line-height: 2.7rem;
-      margin: 0;
-      text-align: center;
+      background: var(--fill-2);
+      border-radius: 8px;
+      margin: 0 0 15px;
+      padding: 13px 45px;
       > ul {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        gap: 30px;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -634,7 +638,6 @@ body {
           > a {
             display: block;
             font-weight: bold;
-            padding: 0 1.15rem;
             &:focus,
             &:hover {
               text-decoration: none;
@@ -658,14 +661,35 @@ body {
             border-radius: 8px;
             padding: 10px 12px;
             &:first-child {
-              background: #cdc;
-              color: #345;
+              --fill-input: var(--fill-2);
+              --stroke-input: var(--fill-2);
+              background: var(--fill-3);
+              color: var(--color-3);
+              figure {
+                img {
+                  float: left;
+                  height: 72px;
+                  margin: 0 1.5rem 0 0;
+                  max-height: 72px;
+                  max-width: 72px;
+                  object-fit: cover;
+                  width: 72px;
+                }
+                figcaption {
+                  text-align: left;
+                }
+              }
               li {
                 border-color: #9b9;
               }
             }
             &::after {
               @include clear();
+            }
+            a {
+              &[rel='author'] {
+                font-weight: bold;
+              }
             }
             li,
             summary {
@@ -690,7 +714,7 @@ body {
               list-style: none;
               margin-left: 0;
               li {
-                background: url("//www.blogblog.com/rounders/icon_arrow_sm.gif") no-repeat 0 50%;
+                background: transparent var(--icon-arrow--small) no-repeat 0 50%;
               }
             }
             > h3 {
@@ -713,6 +737,11 @@ body {
                 font-size: 115%;
                 margin: 0 0 2px;
                 padding: 0 0 5px;
+                + [role='tree'],
+                + ol,
+                + ul {
+                  margin-top: 0;
+                }
               }
               + div {
                 margin-top: 15px;
@@ -749,7 +778,7 @@ body {
               padding: 2px 14px 4px 29px;
               a {
                 &[href$='#comments'] {
-                  background: url("//www.blogblog.com/rounders/icon_comment.gif") no-repeat 0 50%;
+                  background: transparent var(--icon-comment) no-repeat 0 50%;
                   display: inline-block;
                   padding: 0 0 0 14px;
                 }
@@ -759,7 +788,7 @@ body {
               }
             }
             > header {
-              background: url("//www.blogblog.com/rounders/icon_arrow.gif") no-repeat 10px 50%;
+              background: transparent var(--icon-arrow) no-repeat 10px 50%;
               border-bottom: 1px dotted var(--stroke);
               padding: 2px 14px 2px 29px;
               h2,

@@ -188,6 +188,7 @@ textarea {
   background: var(--fill-input, var(--fill));
   border: 1px solid;
   border-color: var(--stroke-input, var(--stroke));
+  border-radius: 4px;
   color: var(--color-input);
   display: inline-block;
   height: 2rem;
@@ -229,6 +230,13 @@ u {
   text-decoration: underline;
 }
 
+a[rel=author],
+[rel=author][role=link] {
+  background: transparent var(--icon-author) no-repeat 0 50%;
+  display: inline-block;
+  padding: 0 0 0 14px;
+}
+
 abbr {
   cursor: help;
 }
@@ -246,7 +254,7 @@ figcaption {
 }
 
 code {
-  font-family: var(--face-2);
+  font-family: var(--face-1);
 }
 
 details > summary {
@@ -297,6 +305,11 @@ details[role=tree] + [role=tree] {
   margin-top: 0;
 }
 
+dl {
+  margin-left: 1.15rem;
+  margin-right: 1.15rem;
+}
+
 ol,
 ul {
   margin-left: 2rem;
@@ -306,11 +319,6 @@ ol ul,
 ul ol,
 ul ul {
   margin-left: 1.15rem;
-}
-
-dl {
-  margin-left: 1.15rem;
-  margin-right: 1.15rem;
 }
 
 fieldset {
@@ -324,6 +332,8 @@ figure {
 }
 figure img {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 form > p > label {
@@ -364,7 +374,6 @@ h6 {
 }
 
 hr {
-  border: 0;
   border-top: 1px dotted;
   border-color: var(--stroke);
 }
@@ -431,6 +440,7 @@ ul {
 
 audio,
 iframe,
+picture,
 video {
   display: block;
   height: auto;
@@ -446,21 +456,13 @@ input[type=submit] {
   border-width: 0;
   color: var(--color-button) !important;
   cursor: pointer;
+  font-weight: bold;
   line-height: 2rem;
   padding-left: 0.65rem;
   padding-right: 0.65rem;
   text-align: center;
   text-decoration: none !important;
   width: auto;
-}
-button:not(:focus-visible),
-[role=button]:not(:focus-visible),
-input[type=button]:not(:focus-visible),
-input[type=reset]:not(:focus-visible),
-input[type=submit]:not(:focus-visible) {
-  outline: 1px solid;
-  outline-color: var(--stroke-button);
-  outline-offset: -3px;
 }
 
 input[type=color],
@@ -534,7 +536,7 @@ textarea {
 .comments-body,
 .comments-footer,
 .form-comment {
-  margin-top: 1.15rem;
+  margin-top: 0.75rem;
 }
 
 .comments h3,
@@ -544,15 +546,28 @@ textarea {
 }
 
 .comment-header .comment-author {
+  background: transparent var(--icon-comment) no-repeat 0 50%;
   color: inherit;
   font: inherit;
   font-weight: bold;
+  padding: 0 0 0 16px;
 }
 
 .form-comment p input + br + small,
 .form-comment p select + br + small,
 .form-comment p textarea + br + small {
   color: var(--color-2);
+}
+
+#comments {
+  border-top: 2px solid var(--stroke-2);
+  margin-top: 0;
+  padding: 15px;
+}
+
+form[name=pass] {
+  --fill-input: var(--fill-2);
+  --stroke-input: var(--fill-2);
 }
 
 search {
@@ -587,10 +602,15 @@ search p {
   background: var(--fill-2, #fff);
 }
 
+form[name=user] {
+  --fill-input: var(--fill-2);
+  --stroke-input: var(--fill-2);
+}
+
 body > div {
   margin: 0 auto;
-  padding: 20px;
-  width: 780px;
+  padding: 18px;
+  width: 776px;
 }
 body > div > footer {
   background: var(--fill-1);
@@ -611,7 +631,7 @@ body > div > footer p {
 }
 body > div > footer p:only-child {
   flex: 1;
-  text-align: center;
+  text-align: right;
 }
 body > div > header {
   background: var(--fill-1);
@@ -645,17 +665,15 @@ body > div > header h1 + p {
   margin: 5px 0 0;
 }
 body > div > nav {
-  border-bottom: 1px dotted;
-  border-color: var(--stroke);
-  font-size: 100%;
-  line-height: 2.7rem;
-  margin: 0;
-  text-align: center;
+  background: var(--fill-2);
+  border-radius: 8px;
+  margin: 0 0 15px;
+  padding: 13px 45px;
 }
 body > div > nav > ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -664,7 +682,6 @@ body > div > nav > ul > li > a,
 body > div > nav > ul > li > [role=link] {
   display: block;
   font-weight: bold;
-  padding: 0 1.15rem;
 }
 body > div > nav > ul > li > a:focus,
 body > div > nav > ul > li > [role=link]:focus,
@@ -692,8 +709,24 @@ body > div > nav + div > aside > div {
 }
 body > div > header + div > aside > div:first-child,
 body > div > nav + div > aside > div:first-child {
-  background: #cdc;
-  color: #345;
+  --fill-input: var(--fill-2);
+  --stroke-input: var(--fill-2);
+  background: var(--fill-3);
+  color: var(--color-3);
+}
+body > div > header + div > aside > div:first-child figure img,
+body > div > nav + div > aside > div:first-child figure img {
+  float: left;
+  height: 72px;
+  margin: 0 1.5rem 0 0;
+  max-height: 72px;
+  max-width: 72px;
+  object-fit: cover;
+  width: 72px;
+}
+body > div > header + div > aside > div:first-child figure figcaption,
+body > div > nav + div > aside > div:first-child figure figcaption {
+  text-align: left;
 }
 body > div > header + div > aside > div:first-child li,
 body > div > nav + div > aside > div:first-child li {
@@ -704,6 +737,12 @@ body > div > nav + div > aside > div::after {
   clear: both;
   content: "";
   display: table;
+}
+body > div > header + div > aside > div a[rel=author],
+body > div > header + div > aside > div [rel=author][role=link],
+body > div > nav + div > aside > div a[rel=author],
+body > div > nav + div > aside > div [rel=author][role=link] {
+  font-weight: bold;
 }
 body > div > header + div > aside > div li [role=status]::after,
 body > div > header + div > aside > div summary [role=status]::after,
@@ -733,7 +772,7 @@ body > div > nav + div > aside > div ul {
 }
 body > div > header + div > aside > div ul li,
 body > div > nav + div > aside > div ul li {
-  background: url("//www.blogblog.com/rounders/icon_arrow_sm.gif") no-repeat 0 50%;
+  background: transparent var(--icon-arrow--small) no-repeat 0 50%;
 }
 body > div > header + div > aside > div > h3,
 body > div > nav + div > aside > div > h3 {
@@ -760,6 +799,14 @@ body > div > nav + div > aside > div > div h3 {
   font-size: 115%;
   margin: 0 0 2px;
   padding: 0 0 5px;
+}
+body > div > header + div > aside > div > div h3 + [role=tree],
+body > div > header + div > aside > div > div h3 + ol,
+body > div > header + div > aside > div > div h3 + ul,
+body > div > nav + div > aside > div > div h3 + [role=tree],
+body > div > nav + div > aside > div > div h3 + ol,
+body > div > nav + div > aside > div > div h3 + ul {
+  margin-top: 0;
 }
 body > div > header + div > aside > div > div + div,
 body > div > nav + div > aside > div > div + div {
@@ -806,7 +853,7 @@ body > div > header + div > main > article > footer a[href$="#comments"],
 body > div > header + div > main > article > footer [href$="#comments"][role=link],
 body > div > nav + div > main > article > footer a[href$="#comments"],
 body > div > nav + div > main > article > footer [href$="#comments"][role=link] {
-  background: url("//www.blogblog.com/rounders/icon_comment.gif") no-repeat 0 50%;
+  background: transparent var(--icon-comment) no-repeat 0 50%;
   display: inline-block;
   padding: 0 0 0 14px;
 }
@@ -816,7 +863,7 @@ body > div > nav + div > main > article > footer p {
 }
 body > div > header + div > main > article > header,
 body > div > nav + div > main > article > header {
-  background: url("//www.blogblog.com/rounders/icon_arrow.gif") no-repeat 10px 50%;
+  background: transparent var(--icon-arrow) no-repeat 10px 50%;
   border-bottom: 1px dotted var(--stroke);
   padding: 2px 14px 2px 29px;
 }
@@ -879,18 +926,29 @@ body > div > nav + div > main > p:not([role=alert]):empty {
   --color-1: #fff;
   --color-1: #fff;
   --color-2: #888;
+  --color-3: #345;
+  --color-button: #fff;
   --color-link-1: #c63;
   --color-link-2: #666;
   --color-link: #258;
   --color: #333;
+  --face-1: "Courier New", Courier, monospace;
   --face: "Trebuchet MS", Trebuchet, sans-serif;
   --fill-1: #456;
-  --fill-1: #456;
   --fill-2: #fff;
+  --fill-3: #cdc;
   --fill-alert: rgba(204, 204, 204, 0.5);
+  --fill-button: #686;
+  --fill-input: #eee;
+  --fill-mark: #fea;
   --fill: #aba;
+  --icon-arrow--small: url("data:image/gif;base64,R0lGODlhCQAJAJEDALLDsv///9nh2f///yH5BAEAAAMALAAAAAAJAAkAAAIRHI5gySfRHEyh1vbwjGmxUQAAOw==");
+  --icon-arrow: url("data:image/gif;base64,R0lGODlhDAAMAJEDAGaIZv///7PEs////yH5BAEAAAMALAAAAAAMAAwAAAIYHI5pyS0RWnpRHsqg1mlvi0mhA1nmYg0FADs=");
+  --icon-author: url("data:image/gif;base64,R0lGODlhCQALAKIHAJmqmay9rJytnKO0o8DRwK6/rrjJuMzdzCH5BAEAAAcALAAAAAAJAAsAAAMieEchQUoFQEM8ggJxZ72MA12kQhQDMDyHkWmbkcLUTN90AgA7");
+  --icon-comment: url("data:image/gif;base64,R0lGODlhCgAJAJECALLDsv///////wAAACH5BAEAAAIALAAAAAAKAAkAAAIRFI5nyRgfmnRwstWE3mj7pRUAOw==");
   --stroke-1: #ccc;
   --stroke-2: #89a;
   --stroke-alert: rgba(0, 0, 0, 0.5);
+  --stroke-input: #eee;
   --stroke: #bbb;
 }

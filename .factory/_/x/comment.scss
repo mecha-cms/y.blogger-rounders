@@ -2,7 +2,7 @@
 .comments-body,
 .comments-footer,
 .form-comment {
-  margin-top: 1.15rem;
+  margin-top: 0.75rem;
 }
 
 .comments {
@@ -13,15 +13,13 @@
   }
 }
 
-.comment-footer {
-}
-
 .comment-header {
-  @extend .comment-footer;
   .comment-author {
+    background: transparent var(--icon-comment) no-repeat 0 50%;
     color: inherit;
     font: inherit;
     font-weight: bold;
+    padding: 0 0 0 16px;
   }
 }
 
@@ -37,4 +35,10 @@
       }
     }
   }
+}
+
+#comments {
+  border-top: 2px solid var(--stroke-2);
+  margin-top: 0;
+  padding: 15px;
 }
