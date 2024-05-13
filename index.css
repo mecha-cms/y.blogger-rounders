@@ -242,6 +242,7 @@ abbr {
 }
 
 blockquote {
+  color: var(--color-3);
   font-size: 1.185rem;
   margin-left: 1.15rem;
   margin-right: 1.15rem;
@@ -249,7 +250,8 @@ blockquote {
 
 caption,
 figcaption {
-  margin: 1rem 0 0;
+  color: var(--color-2);
+  margin: 0.5rem 0 0;
   text-align: center;
 }
 
@@ -379,6 +381,7 @@ hr {
 }
 
 legend {
+  color: var(--color-2);
   padding: 0 0.5rem;
 }
 
@@ -891,7 +894,7 @@ body > div > header + div > main > p:not([role=alert]),
 body > div > nav + div > main > p:not([role=alert]) {
   border: 0 dotted var(--stroke);
   border-width: 1px 0;
-  color: #357;
+  color: var(--color-4);
   font-size: 85%;
   font-weight: bold;
   letter-spacing: 0.2em;
@@ -924,9 +927,9 @@ body > div > nav + div > main > p:not([role=alert]):empty {
 }
 .skin\:1 {
   --color-1: #fff;
-  --color-1: #fff;
   --color-2: #888;
   --color-3: #345;
+  --color-4: #357;
   --color-button: #fff;
   --color-link-1: #c63;
   --color-link-2: #666;
