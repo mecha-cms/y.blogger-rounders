@@ -833,7 +833,7 @@ body > div > nav + div > main > article {
 body > div > header + div > main > article > div,
 body > div > nav + div > main > article > div {
   margin: 0;
-  padding: 10px 14px 13px 29px;
+  padding: 10px 14px 12px 29px;
 }
 body > div > header + div > main > article > div::after,
 body > div > nav + div > main > article > div::after {
@@ -859,6 +859,14 @@ body > div > nav + div > main > article > footer [href$="#comments"][role=link] 
   background: transparent var(--icon-comment) no-repeat 0 50%;
   display: inline-block;
   padding: 0 0 0 14px;
+}
+body > div > header + div > main > article > footer a[rel=author],
+body > div > header + div > main > article > footer [rel=author][role=link],
+body > div > nav + div > main > article > footer a[rel=author],
+body > div > nav + div > main > article > footer [rel=author][role=link] {
+  background: 0 0;
+  display: inline;
+  padding: 0;
 }
 body > div > header + div > main > article > footer p,
 body > div > nav + div > main > article > footer p {
