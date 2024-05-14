@@ -1,7 +1,7 @@
 .skin\:1 {
   --color-1: #fff;
   --color-2: #888;
-  --color-3: #345;
+  --color-3: #666;
   --color-4: #357;
   --color-button: #fff;
   --color-link-1: #c63;
@@ -12,7 +12,7 @@
   --face: 'Trebuchet MS', Trebuchet, sans-serif;
   --fill-1: #456;
   --fill-2: #fff;
-  --fill-3: #cdc;
+  --fill-3: #ded;
   --fill-alert: rgba(204, 204, 204, 0.5);
   --fill-button: #686;
   --fill-input: #eee;
@@ -26,5 +26,33 @@
   --stroke-2: #89a;
   --stroke-alert: rgba(0, 0, 0, 0.5);
   --stroke-input: #eee;
+  --stroke-widget: #9b9;
   --stroke: #bbb;
+  body {
+    > div {
+      > footer,
+      > header {
+        a {
+          --color-link: #ded;
+        }
+      }
+      > header,
+      > nav {
+        + div {
+          > aside {
+            > div {
+              &:first-child {
+                --color-2: #9a9;
+                --color: #345;
+                --fill-2: #cdc;
+                --fill-input: #fff;
+                --stroke-1: #aca;
+                --stroke-input: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

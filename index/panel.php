@@ -23,11 +23,10 @@ Hook::set('_', function ($_) use ($state, $url) {
         ];
         $_['lot']['desk']['lot']['form']['lot'][1]['lot']['tabs']['lot']['blog']['lot']['fields']['lot']['skin'] = [
             'lot' => [
-                'black' => 'Black',
-                'blue' => 'Blue',
-                'brick' => 'Brick',
-                'ochre' => 'Ochre',
-                'white' => 'White'
+                '1' => 'Rounders 1',
+                '2' => 'Rounders 2',
+                '3' => 'Rounders 3',
+                '4' => 'Rounders 4'
             ],
             'name' => 'state[y][blogger-rounders][skin][name]',
             'stack' => 30,

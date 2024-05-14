@@ -145,7 +145,7 @@ li {
 }
 
 %input {
-  accent-color: var(--color-link);
+  accent-color: var(--fill-button);
   background: var(--fill-input, var(--fill));
   border: 1px solid;
   border-color: var(--stroke-input, var(--stroke));
@@ -198,7 +198,7 @@ th {
 }
 
 blockquote {
-  color: var(--color-3);
+  color: var(--color-4);
   font-size: 1.185rem;
   margin: {
     left: 1.15rem;
@@ -248,7 +248,7 @@ details {
   }
   &[open] {
     > summary {
-      margin-bottom: 1.15rem;
+      margin-bottom: 0.75rem;
       &::before {
         border: {
           bottom: 0 solid transparent;
@@ -404,6 +404,10 @@ pre {
     padding: 0.5rem 0.75rem;
     white-space: pre-wrap;
   }
+}
+
+q {
+  color: var(--color-4);
 }
 
 small,
@@ -589,9 +593,6 @@ body {
       justify-content: space-between;
       margin: 15px 0 0;
       padding: 18px 45px;
-      a {
-        color: #ded;
-      }
       p {
         margin: 0;
         &:only-child {
@@ -662,12 +663,9 @@ body {
           > div {
             background: var(--fill-2);
             border-radius: 8px;
+            color: var(--color);
             padding: 10px 12px;
             &:first-child {
-              --fill-input: var(--fill-2);
-              --stroke-input: var(--fill-2);
-              background: var(--fill-3);
-              color: var(--color-3);
               figure {
                 img {
                   float: left;
@@ -681,9 +679,6 @@ body {
                 figcaption {
                   text-align: left;
                 }
-              }
-              li {
-                border-color: #9b9;
               }
             }
             &::after {
@@ -721,7 +716,7 @@ body {
               }
             }
             > h3 {
-              border-bottom: 1px dotted #9b9;
+              border-bottom: 1px dotted var(--stroke-widget);
               font-size: 115%;
               margin: 0 0 2px;
               padding: 0 0 5px;
@@ -771,9 +766,9 @@ body {
               }
             }
             > footer {
-              background: #ded;
+              background: var(--fill-3);
               border-top: 1px dotted var(--stroke);
-              color: #666;
+              color: var(--color-3);
               display: flex;
               flex-wrap: wrap;
               justify-content: space-between;
@@ -864,3 +859,6 @@ body {
 }
 
 @import './_/1';
+@import './_/2';
+@import './_/3';
+@import './_/4';

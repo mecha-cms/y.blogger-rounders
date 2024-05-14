@@ -184,7 +184,7 @@ input[type=submit],
 input,
 select,
 textarea {
-  accent-color: var(--color-link);
+  accent-color: var(--fill-button);
   background: var(--fill-input, var(--fill));
   border: 1px solid;
   border-color: var(--stroke-input, var(--stroke));
@@ -242,7 +242,7 @@ abbr {
 }
 
 blockquote {
-  color: var(--color-3);
+  color: var(--color-4);
   font-size: 1.185rem;
   margin-left: 1.15rem;
   margin-right: 1.15rem;
@@ -280,7 +280,7 @@ details > summary::before {
   width: 0;
 }
 details[open] > summary {
-  margin-bottom: 1.15rem;
+  margin-bottom: 0.75rem;
 }
 details[open] > summary::before {
   border-bottom: 0 solid transparent;
@@ -406,6 +406,10 @@ pre code {
   overflow: auto;
   padding: 0.5rem 0.75rem;
   white-space: pre-wrap;
+}
+
+q {
+  color: var(--color-4);
 }
 
 sub,
@@ -625,10 +629,6 @@ body > div > footer {
   margin: 15px 0 0;
   padding: 18px 45px;
 }
-body > div > footer a,
-body > div > footer [role=link] {
-  color: #ded;
-}
 body > div > footer p {
   margin: 0;
 }
@@ -708,14 +708,8 @@ body > div > header + div > aside > div,
 body > div > nav + div > aside > div {
   background: var(--fill-2);
   border-radius: 8px;
+  color: var(--color);
   padding: 10px 12px;
-}
-body > div > header + div > aside > div:first-child,
-body > div > nav + div > aside > div:first-child {
-  --fill-input: var(--fill-2);
-  --stroke-input: var(--fill-2);
-  background: var(--fill-3);
-  color: var(--color-3);
 }
 body > div > header + div > aside > div:first-child figure img,
 body > div > nav + div > aside > div:first-child figure img {
@@ -730,10 +724,6 @@ body > div > nav + div > aside > div:first-child figure img {
 body > div > header + div > aside > div:first-child figure figcaption,
 body > div > nav + div > aside > div:first-child figure figcaption {
   text-align: left;
-}
-body > div > header + div > aside > div:first-child li,
-body > div > nav + div > aside > div:first-child li {
-  border-color: #9b9;
 }
 body > div > header + div > aside > div::after,
 body > div > nav + div > aside > div::after {
@@ -779,7 +769,7 @@ body > div > nav + div > aside > div ul li {
 }
 body > div > header + div > aside > div > h3,
 body > div > nav + div > aside > div > h3 {
-  border-bottom: 1px dotted #9b9;
+  border-bottom: 1px dotted var(--stroke-widget);
   font-size: 115%;
   margin: 0 0 2px;
   padding: 0 0 5px;
@@ -843,9 +833,9 @@ body > div > nav + div > main > article > div::after {
 }
 body > div > header + div > main > article > footer,
 body > div > nav + div > main > article > footer {
-  background: #ded;
+  background: var(--fill-3);
   border-top: 1px dotted var(--stroke);
-  color: #666;
+  color: var(--color-3);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -936,7 +926,7 @@ body > div > nav + div > main > p:not([role=alert]):empty {
 .skin\:1 {
   --color-1: #fff;
   --color-2: #888;
-  --color-3: #345;
+  --color-3: #666;
   --color-4: #357;
   --color-button: #fff;
   --color-link-1: #c63;
@@ -947,7 +937,7 @@ body > div > nav + div > main > p:not([role=alert]):empty {
   --face: "Trebuchet MS", Trebuchet, sans-serif;
   --fill-1: #456;
   --fill-2: #fff;
-  --fill-3: #cdc;
+  --fill-3: #ded;
   --fill-alert: rgba(204, 204, 204, 0.5);
   --fill-button: #686;
   --fill-input: #eee;
@@ -961,5 +951,72 @@ body > div > nav + div > main > p:not([role=alert]):empty {
   --stroke-2: #89a;
   --stroke-alert: rgba(0, 0, 0, 0.5);
   --stroke-input: #eee;
+  --stroke-widget: #9b9;
   --stroke: #bbb;
+}
+.skin\:1 body > div > footer a,
+.skin\:1 body > div > footer [role=link],
+.skin\:1 body > div > header a,
+.skin\:1 body > div > header [role=link] {
+  --color-link: #ded;
+}
+.skin\:1 body > div > header + div > aside > div:first-child,
+.skin\:1 body > div > nav + div > aside > div:first-child {
+  --color-2: #9a9;
+  --color: #345;
+  --fill-2: #cdc;
+  --fill-input: #fff;
+  --stroke-1: #aca;
+  --stroke-input: #fff;
+}
+
+.skin\:2 {
+  --color-1: #fff;
+  --color-2: #888;
+  --color-3: #666;
+  --color-4: #810;
+  --color-button: #fff;
+  --color-link-1: #c63;
+  --color-link-2: #666;
+  --color-link: #b30;
+  --color: #333;
+  --face-1: "Courier New", Courier, monospace;
+  --face: "Trebuchet MS", Trebuchet, sans-serif;
+  --fill-1: #710;
+  --fill-2: #fff;
+  --fill-3: #eee;
+  --fill-alert: rgba(204, 204, 204, 0.5);
+  --fill-button: #f90;
+  --fill-input: #eee;
+  --fill-mark: #fea;
+  --fill: #ccc;
+  --icon-arrow--small: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAARUlEQVQYV2P8DwRnz55lwAWMjY0ZGM+cOfMfpwqoBIoiKSkpBklJSQZ0kzFMwqYQrghkNzqAmUiaSSBTiHYTNp8yEhNOACSTNLeBInU8AAAAAElFTkSuQmCC");
+  --icon-arrow: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAVUlEQVQoU2NkAIL/Mxn+g2hCgDGdgZGRWMUwwzA1GDcwMBjXQ+RnMWJYit0GPJpwOwmHJoSGNAL+hjqPAg3o3iPoJGQNJHmarGDFE+XgmCE2tkFJAwCMni/z9e+lyAAAAABJRU5ErkJggg==");
+  --icon-author: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAALCAYAAACtWacbAAAApElEQVQYV51QQQqDMBCcxZOHQERyykN8go+Iz1PwC8EXBPKNnEQUPHiSLQlWaGhL6RyWXWbY2VnChb7vWSkFKSW2bcM8z+i6jiKdSoS1luu6fo5YlgVt276KnHNcFMUtOs8TTdP8semnm26fN03yHIaBYyohBMqyxHEc2Pc9pTTGEI3jyFrrROaI4hACaJomrqrqo9u6rqA8eq6OryDvPX87OnIPGUlO8EertJYAAAAASUVORK5CYII=");
+  --icon-comment: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAJCAYAAAALpr0TAAAAPklEQVQYV2NkAIIzZ878B9G4gImJCSMjIUUwzSgKjY2NUQw9e/YsnD+QJhLta2xBghwSoKABqQET+BTDFAIAt8sm+f8pYWwAAAAASUVORK5CYII=");
+  --stroke-1: #bbb;
+  --stroke-2: #aaa;
+  --stroke-alert: rgba(0, 0, 0, 0.5);
+  --stroke-input: #eee;
+  --stroke-widget: #bbb;
+  --stroke: #bbb;
+}
+.skin\:2 body > div > footer a,
+.skin\:2 body > div > footer [role=link],
+.skin\:2 body > div > header a,
+.skin\:2 body > div > header [role=link] {
+  --color-link: #ccc;
+}
+.skin\:2 body > div > header + div > aside > div:first-child,
+.skin\:2 body > div > nav + div > aside > div:first-child {
+  --color-2: #666;
+  --color-link-1: #ddd;
+  --color-link-2: #ddd;
+  --color-link: #fff;
+  --color: #222;
+  --fill-2: #999;
+  --fill-input: #fff;
+  --stroke-1: #888;
+  --stroke-input: #fff;
+  --stroke-widget: #888;
 }
