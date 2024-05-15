@@ -145,7 +145,7 @@ li {
 }
 
 %input {
-  accent-color: var(--fill-button);
+  accent-color: var(--color-link);
   background: var(--fill-input, var(--fill));
   border: 1px solid;
   border-color: var(--stroke-input, var(--stroke));
@@ -443,6 +443,10 @@ table {
     padding: 0.25rem 0.5rem;
     vertical-align: top;
   }
+  th {
+    background: var(--fill-3);
+    color: var(--color-3);
+  }
 }
 
 ul {
@@ -716,7 +720,8 @@ body {
               }
             }
             > h3 {
-              border-bottom: 1px dotted var(--stroke-widget);
+              border-bottom: 1px dotted var(--stroke-widget-title);
+              color: var(--color-widget-title);
               font-size: 115%;
               margin: 0 0 2px;
               padding: 0 0 5px;
@@ -731,7 +736,8 @@ body {
             }
             > div {
               h3 {
-                border-bottom: 1px dotted #9b9;
+                border-bottom: 1px dotted var(--stroke-widget-title);
+                color: var(--color-widget-title);
                 font-size: 115%;
                 margin: 0 0 2px;
                 padding: 0 0 5px;

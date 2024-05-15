@@ -184,7 +184,7 @@ input[type=submit],
 input,
 select,
 textarea {
-  accent-color: var(--fill-button);
+  accent-color: var(--color-link);
   background: var(--fill-input, var(--fill));
   border: 1px solid;
   border-color: var(--stroke-input, var(--stroke));
@@ -440,6 +440,10 @@ table th {
   padding: 0.25rem 0.5rem;
   vertical-align: top;
 }
+table th {
+  background: var(--fill-3);
+  color: var(--color-3);
+}
 
 ul {
   list-style: disc;
@@ -570,6 +574,10 @@ textarea {
   border-top: 2px solid var(--stroke-2);
   margin-top: 0;
   padding: 15px;
+}
+
+[role=doc-endnotes] {
+  color: var(--color-4);
 }
 
 form[name=pass] {
@@ -769,7 +777,8 @@ body > div > nav + div > aside > div ul li {
 }
 body > div > header + div > aside > div > h3,
 body > div > nav + div > aside > div > h3 {
-  border-bottom: 1px dotted var(--stroke-widget);
+  border-bottom: 1px dotted var(--stroke-widget-title);
+  color: var(--color-widget-title);
   font-size: 115%;
   margin: 0 0 2px;
   padding: 0 0 5px;
@@ -788,7 +797,8 @@ body > div > nav + div > aside > div + div {
 }
 body > div > header + div > aside > div > div h3,
 body > div > nav + div > aside > div > div h3 {
-  border-bottom: 1px dotted #9b9;
+  border-bottom: 1px dotted var(--stroke-widget-title);
+  color: var(--color-widget-title);
   font-size: 115%;
   margin: 0 0 2px;
   padding: 0 0 5px;
@@ -929,9 +939,11 @@ body > div > nav + div > main > p:not([role=alert]):empty {
   --color-3: #666;
   --color-4: #357;
   --color-button: #fff;
+  --color-input: #333;
   --color-link-1: #c63;
   --color-link-2: #666;
   --color-link: #258;
+  --color-widget-title: inherit;
   --color: #333;
   --face-1: "Courier New", Courier, monospace;
   --face: "Trebuchet MS", Trebuchet, sans-serif;
@@ -951,13 +963,15 @@ body > div > nav + div > main > p:not([role=alert]):empty {
   --stroke-2: #89a;
   --stroke-alert: rgba(0, 0, 0, 0.5);
   --stroke-input: #eee;
-  --stroke-widget: #9b9;
+  --stroke-widget-title: #9b9;
   --stroke: #bbb;
 }
 .skin\:1 body > div > footer a,
 .skin\:1 body > div > footer [role=link],
 .skin\:1 body > div > header a,
 .skin\:1 body > div > header [role=link] {
+  --color-link-1: #fff;
+  --color-link-2: #fff;
   --color-link: #ded;
 }
 .skin\:1 body > div > header + div > aside > div:first-child,
@@ -976,9 +990,11 @@ body > div > nav + div > main > p:not([role=alert]):empty {
   --color-3: #666;
   --color-4: #810;
   --color-button: #fff;
+  --color-input: #333;
   --color-link-1: #c63;
   --color-link-2: #666;
   --color-link: #b30;
+  --color-widget-title: inherit;
   --color: #333;
   --face-1: "Courier New", Courier, monospace;
   --face: "Trebuchet MS", Trebuchet, sans-serif;
@@ -998,13 +1014,15 @@ body > div > nav + div > main > p:not([role=alert]):empty {
   --stroke-2: #aaa;
   --stroke-alert: rgba(0, 0, 0, 0.5);
   --stroke-input: #eee;
-  --stroke-widget: #bbb;
+  --stroke-widget-title: #bbb;
   --stroke: #bbb;
 }
 .skin\:2 body > div > footer a,
 .skin\:2 body > div > footer [role=link],
 .skin\:2 body > div > header a,
 .skin\:2 body > div > header [role=link] {
+  --color-link-1: #fff;
+  --color-link-2: #fff;
   --color-link: #ccc;
 }
 .skin\:2 body > div > header + div > aside > div:first-child,
@@ -1019,4 +1037,65 @@ body > div > nav + div > main > p:not([role=alert]):empty {
   --stroke-1: #888;
   --stroke-input: #fff;
   --stroke-widget: #888;
+}
+
+.skin\:3 {
+  --color-1: #fff;
+  --color-2: #999;
+  --color-3: #666;
+  --color-4: #586;
+  --color-button: #fff;
+  --color-input: #333;
+  --color-link-1: #234;
+  --color-link-2: #234;
+  --color-link: #456;
+  --color-widget-title: #abc;
+  --color: #333;
+  --face-1: "Courier New", Courier, monospace;
+  --face: "Trebuchet MS", Trebuchet, sans-serif;
+  --fill-1: #357;
+  --fill-2: #eec;
+  --fill-3: #ffd;
+  --fill-alert: rgba(204, 204, 204, 0.5);
+  --fill-button: #697;
+  --fill-input: #fff;
+  --fill-mark: #fea;
+  --fill: #123;
+  --icon-arrow--small: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAASElEQVQYV2NkAAKXtLj/IBob2DNrESMjPgUwTSiKjG30GIyt9RlmdS5GMRTDJGwK4YrSymMxnAQzkTSTQMYQ7SZswcBITDgBANgVJTusZcLFAAAAAElFTkSuQmCC");
+  --icon-arrow: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAVElEQVQoU2NkAIK0meX/QTQhMCu9k5GRWMUwwzA0+Bq7MPgAMQikz6rAsBSrDfg04XQSLk1wDTPTOvD6GeY88jWgG0/QScgaSPI0WcGKz/eMpCYNAN8DOJ8c70gXAAAAAElFTkSuQmCC");
+  --icon-author: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAALCAYAAACtWacbAAAAmklEQVQYV2NkgIK0mXn/JSV5GcTEuBlevfrK8Pz5Z4ZZ6ZMYQdJgAgTqN1X/l5LihXEZnj37zNDo14qqaOqJtv8sLExwRX/+/GPItqgiwySi3AS3BwsDbCfMFF5edgZeXjaGz59/AfFPuA8ZCxYX/1dREWJgZWXGMOP3778Md+68Y2Ds2d/0H6QbFwCZyjjzTMd/fO4BByYxigDGD0o1OsU1ZQAAAABJRU5ErkJggg==");
+  --icon-comment: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAJCAYAAAALpr0TAAAAPUlEQVQYV2NkAIK0meX/QTQuMCu9k5GRkCKYZhSF2R7xKIZO3bEQzh9IE4n2NbYgQQ4JUNCA1IAJfIphCgEKCiJTa5wLBAAAAABJRU5ErkJggg==");
+  --stroke-1: #468;
+  --stroke-2: #89a;
+  --stroke-alert: rgba(0, 0, 0, 0.5);
+  --stroke-input: #fff;
+  --stroke-widget-title: #579;
+  --stroke: #bbb;
+}
+.skin\:3 body > div > footer a,
+.skin\:3 body > div > footer [role=link],
+.skin\:3 body > div > header a,
+.skin\:3 body > div > header [role=link] {
+  --color-link-1: #fff;
+  --color-link-2: #fff;
+  --color-link: #ded;
+}
+.skin\:3 body > div > header + div > aside,
+.skin\:3 body > div > nav + div > aside {
+  --color-link-1: #fff;
+  --color-link-2: #fff;
+  --color-link: #9db;
+  --color: #fff;
+}
+.skin\:3 body > div > header + div > aside > div,
+.skin\:3 body > div > nav + div > aside > div {
+  --fill-2: #357;
+}
+.skin\:3 body > div > header + div > aside > div:first-child,
+.skin\:3 body > div > nav + div > aside > div:first-child {
+  --color-2: #fff;
+  --color-widget-title: #bca;
+  --fill-2: #586;
+  --stroke-1: #697;
+  --stroke-widget-title: #7a8;
 }

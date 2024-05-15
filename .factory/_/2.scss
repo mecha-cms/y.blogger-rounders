@@ -4,9 +4,11 @@
   --color-3: #666;
   --color-4: #810;
   --color-button: #fff;
+  --color-input: #333;
   --color-link-1: #c63;
   --color-link-2: #666;
   --color-link: #b30;
+  --color-widget-title: inherit;
   --color: #333;
   --face-1: 'Courier New', Courier, monospace;
   --face: 'Trebuchet MS', Trebuchet, sans-serif;
@@ -26,13 +28,15 @@
   --stroke-2: #aaa;
   --stroke-alert: rgba(0, 0, 0, 0.5);
   --stroke-input: #eee;
-  --stroke-widget: #bbb;
+  --stroke-widget-title: #bbb;
   --stroke: #bbb;
   body {
     > div {
       > footer,
       > header {
         a {
+          --color-link-1: #fff;
+          --color-link-2: #fff;
           --color-link: #ccc;
         }
       }

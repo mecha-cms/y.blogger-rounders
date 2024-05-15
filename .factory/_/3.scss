@@ -1,0 +1,66 @@
+.skin\:3 {
+  --color-1: #fff;
+  --color-2: #999;
+  --color-3: #666;
+  --color-4: #586;
+  --color-button: #fff;
+  --color-input: #333;
+  --color-link-1: #234;
+  --color-link-2: #234;
+  --color-link: #456;
+  --color-widget-title: #abc;
+  --color: #333;
+  --face-1: 'Courier New', Courier, monospace;
+  --face: 'Trebuchet MS', Trebuchet, sans-serif;
+  --fill-1: #357;
+  --fill-2: #eec;
+  --fill-3: #ffd;
+  --fill-alert: rgba(204, 204, 204, 0.5);
+  --fill-button: #697;
+  --fill-input: #fff;
+  --fill-mark: #fea;
+  --fill: #123;
+  --icon-arrow--small: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAASElEQVQYV2NkAAKXtLj/IBob2DNrESMjPgUwTSiKjG30GIyt9RlmdS5GMRTDJGwK4YrSymMxnAQzkTSTQMYQ7SZswcBITDgBANgVJTusZcLFAAAAAElFTkSuQmCC');
+  --icon-arrow: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAVElEQVQoU2NkAIK0meX/QTQhMCu9k5GRWMUwwzA0+Bq7MPgAMQikz6rAsBSrDfg04XQSLk1wDTPTOvD6GeY88jWgG0/QScgaSPI0WcGKz/eMpCYNAN8DOJ8c70gXAAAAAElFTkSuQmCC');
+  --icon-author: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAALCAYAAACtWacbAAAAmklEQVQYV2NkgIK0mXn/JSV5GcTEuBlevfrK8Pz5Z4ZZ6ZMYQdJgAgTqN1X/l5LihXEZnj37zNDo14qqaOqJtv8sLExwRX/+/GPItqgiwySi3AS3BwsDbCfMFF5edgZeXjaGz59/AfFPuA8ZCxYX/1dREWJgZWXGMOP3778Md+68Y2Ds2d/0H6QbFwCZyjjzTMd/fO4BByYxigDGD0o1OsU1ZQAAAABJRU5ErkJggg==');
+  --icon-comment: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAJCAYAAAALpr0TAAAAPUlEQVQYV2NkAIK0meX/QTQuMCu9k5GRkCKYZhSF2R7xKIZO3bEQzh9IE4n2NbYgQQ4JUNCA1IAJfIphCgEKCiJTa5wLBAAAAABJRU5ErkJggg==');
+  --stroke-1: #468;
+  --stroke-2: #89a;
+  --stroke-alert: rgba(0, 0, 0, 0.5);
+  --stroke-input: #fff;
+  --stroke-widget-title: #579;
+  --stroke: #bbb;
+  body {
+    > div {
+      > footer,
+      > header {
+        a {
+          --color-link-1: #fff;
+          --color-link-2: #fff;
+          --color-link: #ded;
+        }
+      }
+      > header,
+      > nav {
+        + div {
+          > aside {
+            --color-link-1: #fff;
+            --color-link-2: #fff;
+            --color-link: #9db;
+            --color: #fff;
+            > div {
+              --fill-2: #357;
+              &:first-child {
+                --color-2: #fff;
+                --color-widget-title: #bca;
+                --fill-2: #586;
+                --stroke-1: #697;
+                --stroke-widget-title: #7a8;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
