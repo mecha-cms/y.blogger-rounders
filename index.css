@@ -916,6 +916,10 @@ body > div > nav + div > main > p:not([role=alert]):empty {
   height: 13px;
   padding: 0;
 }
+body > div > header + div > main > p:not([role=alert]):first-child,
+body > div > nav + div > main > p:not([role=alert]):first-child {
+  border-top-color: transparent;
+}
 
 @media (max-width: 680px) {
   body > div {
