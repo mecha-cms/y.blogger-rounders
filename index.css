@@ -832,8 +832,13 @@ body > div > nav + div > main > article {
 }
 body > div > header + div > main > article > div,
 body > div > nav + div > main > article > div {
+  border: 0 dotted var(--stroke);
   margin: 0;
-  padding: 10px 14px 12px 29px;
+  padding: 10px 14px 10px 29px;
+}
+body > div > header + div > main > article > div:not(:last-child),
+body > div > nav + div > main > article > div:not(:last-child) {
+  border-bottom-width: 1px;
 }
 body > div > header + div > main > article > div::after,
 body > div > nav + div > main > article > div::after {
@@ -844,7 +849,6 @@ body > div > nav + div > main > article > div::after {
 body > div > header + div > main > article > footer,
 body > div > nav + div > main > article > footer {
   background: var(--fill-3);
-  border-top: 1px dotted var(--stroke);
   color: var(--color-3);
   display: flex;
   flex-wrap: wrap;
@@ -875,7 +879,8 @@ body > div > nav + div > main > article > footer p {
 body > div > header + div > main > article > header,
 body > div > nav + div > main > article > header {
   background: transparent var(--icon-arrow) no-repeat 10px 50%;
-  border-bottom: 1px dotted var(--stroke);
+  border: 0 dotted var(--stroke);
+  border-bottom-width: 1px;
   padding: 2px 14px 2px 29px;
 }
 body > div > header + div > main > article > header h2,
