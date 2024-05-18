@@ -606,7 +606,8 @@ body {
       }
     }
     > header {
-      background: var(--fill-1);
+      background: var(--fill-1) none no-repeat 50% 50%;
+      background-size: cover;
       color: var(--color-1);
       padding: 18px 45px;
       border-radius: 8px;

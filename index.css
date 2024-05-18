@@ -645,7 +645,8 @@ body > div > footer p:only-child {
   text-align: right;
 }
 body > div > header {
-  background: var(--fill-1);
+  background: var(--fill-1) none no-repeat 50% 50%;
+  background-size: cover;
   color: var(--color-1);
   padding: 18px 45px;
   border-radius: 8px;
@@ -1107,4 +1108,67 @@ body > div > nav + div > main > p:not([role=alert]):first-child {
   --fill-2: #586;
   --stroke-1: #697;
   --stroke-widget-title: #7a8;
+}
+
+.skin\:4 {
+  --color-1: #fff;
+  --color-2: #888;
+  --color-3: #acb;
+  --color-4: #cf4;
+  --color-button: #fff;
+  --color-input: #333;
+  --color-link-1: #fff;
+  --color-link-2: #fff;
+  --color-link: #fff;
+  --color-widget-title: inherit;
+  --color: #ced;
+  --face-1: "Courier New", Courier, monospace;
+  --face: "Trebuchet MS", Trebuchet, sans-serif;
+  --fill-1: #476;
+  --fill-2: #466;
+  --fill-3: #577;
+  --fill-alert: rgba(204, 204, 204, 0.5);
+  --fill-button: #9c3;
+  --fill-input: #eee;
+  --fill-mark: #fea;
+  --fill: #bca;
+  --icon-arrow--small: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAASElEQVQYV2NkAILttwv+g2hswFN1AiMjPgUwTSiKVIQ8GFSE3Bl23ClEMRTDJGwK4Yo8VPoxnAQzkTSTQMYQ7SZswcBITDgBAOnlLBEdiaB+AAAAAElFTkSuQmCC");
+  --icon-arrow: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAVklEQVQoU2NkAIKZZ4z/g2hCIN3kLCMjsYphhmFouHpWiuHaWUmwfGjaWQxLsdqATxNOJ+HSBNewepYxXj/DnEe+BnTjCToJWQNJniYrWPH5npHUpAEAYENF84igK20AAAAASUVORK5CYII=");
+  --icon-author: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAALCAYAAACtWacbAAAAo0lEQVQYV2NkgIIVpzL+S0srMoiJyTC8evWE4enT+wwRZjMYQdJgAgQOP+38LyWlCOMyPHt2n8FWuhxV0c3fS/+zsLDCFf3585tBnTWaDJOIchPcHiwMsJ1rz+f9FxOTZuDlFQRiAYbPnz8A8XugL58yBBtOYmTccq3sv6qqPgOyo2GGgRx/+/ZFBsYLn2b9B+nGBUCmMt79v+o/PveAA5MYRQDS9UxwtAipqAAAAABJRU5ErkJggg==");
+  --icon-comment: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAJCAYAAAALpr0TAAAAPklEQVQYV2NkAIKZq1b9B9G4QHpYGCMjIUUwzSgKj1y4gGKojYEBnD+QJhLta2xBghwSoKABqQET+BTDFAIAkpAkpgR20LYAAAAASUVORK5CYII=");
+  --stroke-1: #ccc;
+  --stroke-2: #898;
+  --stroke-alert: rgba(0, 0, 0, 0.5);
+  --stroke-input: #eee;
+  --stroke-widget-title: #9b9;
+  --stroke: #9bb;
+}
+.skin\:4 body > div > footer a,
+.skin\:4 body > div > footer [role=link],
+.skin\:4 body > div > header a,
+.skin\:4 body > div > header [role=link] {
+  --color-link-1: #fff;
+  --color-link-2: #fff;
+  --color-link: #ded;
+}
+.skin\:4 body > div > header {
+  background-image: url("https://resources.blogblog.com/blogblog/data/rounders4/bg_hdr_bot.jpg");
+  background-position: 50% 100%;
+}
+.skin\:4 body > div > header + div > aside > div,
+.skin\:4 body > div > nav + div > aside > div {
+  --color-link-1: #798;
+  --color-link-2: #798;
+  --color-link: #475;
+  --color: #666;
+  --fill-2: #fff;
+}
+.skin\:4 body > div > header + div > aside > div:first-child,
+.skin\:4 body > div > nav + div > aside > div:first-child {
+  --color-2: #ded;
+  --color: #fff;
+  --fill-2: #9b5;
+  --fill-input: #fff;
+  --stroke-1: #aca;
+  --stroke-input: #fff;
 }
