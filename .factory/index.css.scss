@@ -274,7 +274,7 @@ details {
       }
     }
     + [role='tree'] {
-      border: 0 dotted var(--stroke-1);
+      border: 0 dotted var(--stroke-widget-list);
       border-top-width: 1px;
       margin-top: 0;
     }
@@ -398,6 +398,7 @@ ol {
 pre {
   code {
     background: var(--fill-code, var(--color));
+    border-radius: 4px;
     color: var(--color-code, var(--fill));
     display: block;
     overflow: auto;
@@ -708,7 +709,7 @@ body {
             li {
               padding: 3px 0 3px 16px;
               + li {
-                border: 0 dotted var(--stroke-1);
+                border: 0 dotted var(--stroke-widget-list);
                 border-top-width: 1px;
               }
             }
@@ -757,7 +758,7 @@ body {
         > main {
           background: var(--fill-2);
           border-radius: 8px;
-          border: 2px solid var(--stroke-2);
+          border: 2px solid var(--stroke-1);
           flex: 1;
           margin: 0;
           min-width: 0;

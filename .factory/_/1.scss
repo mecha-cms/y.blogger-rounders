@@ -24,10 +24,10 @@
   --icon-arrow: url('data:image/gif;base64,R0lGODlhDAAMAJEDAGaIZv///7PEs////yH5BAEAAAMALAAAAAAMAAwAAAIYHI5pyS0RWnpRHsqg1mlvi0mhA1nmYg0FADs=');
   --icon-author: url('data:image/gif;base64,R0lGODlhCQALAKIHAJmqmay9rJytnKO0o8DRwK6/rrjJuMzdzCH5BAEAAAcALAAAAAAJAAsAAAMieEchQUoFQEM8ggJxZ72MA12kQhQDMDyHkWmbkcLUTN90AgA7');
   --icon-comment: url('data:image/gif;base64,R0lGODlhCgAJAJECALLDsv///////wAAACH5BAEAAAIALAAAAAAKAAkAAAIRFI5nyRgfmnRwstWE3mj7pRUAOw==');
-  --stroke-1: #ccc;
-  --stroke-2: #89a;
+  --stroke-1: #89a;
   --stroke-alert: rgba(0, 0, 0, 0.5);
   --stroke-input: #eee;
+  --stroke-widget-list: #ccc;
   --stroke-widget-title: #9b9;
   --stroke: #bbb;
   body {
@@ -50,8 +50,8 @@
                 --color: #345;
                 --fill-2: #cdc;
                 --fill-input: #fff;
-                --stroke-1: #aca;
                 --stroke-input: #fff;
+                --stroke-widget-list: #aca;
               }
             }
           }

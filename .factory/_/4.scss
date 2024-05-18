@@ -1,9 +1,10 @@
 .skin\:4 {
   --color-1: #fff;
-  --color-2: #888;
+  --color-2: #ab9;
   --color-3: #acb;
   --color-4: #cf4;
   --color-button: #fff;
+  --color-code: #fff;
   --color-input: #333;
   --color-link-1: #fff;
   --color-link-2: #fff;
@@ -17,18 +18,19 @@
   --fill-3: #577;
   --fill-alert: rgba(204, 204, 204, 0.5);
   --fill-button: #9c3;
+  --fill-code: #355;
   --fill-input: #eee;
-  --fill-mark: #fea;
+  --fill-mark: #577;
   --fill: #bca;
   --icon-arrow--small: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAASElEQVQYV2NkAILttwv+g2hswFN1AiMjPgUwTSiKVIQ8GFSE3Bl23ClEMRTDJGwK4Yo8VPoxnAQzkTSTQMYQ7SZswcBITDgBAOnlLBEdiaB+AAAAAElFTkSuQmCC');
   --icon-arrow: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAVklEQVQoU2NkAIKZZ4z/g2hCIN3kLCMjsYphhmFouHpWiuHaWUmwfGjaWQxLsdqATxNOJ+HSBNewepYxXj/DnEe+BnTjCToJWQNJniYrWPH5npHUpAEAYENF84igK20AAAAASUVORK5CYII=');
   --icon-author: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAALCAYAAACtWacbAAAAo0lEQVQYV2NkgIIVpzL+S0srMoiJyTC8evWE4enT+wwRZjMYQdJgAgQOP+38LyWlCOMyPHt2n8FWuhxV0c3fS/+zsLDCFf3585tBnTWaDJOIchPcHiwMsJ1rz+f9FxOTZuDlFQRiAYbPnz8A8XugL58yBBtOYmTccq3sv6qqPgOyo2GGgRx/+/ZFBsYLn2b9B+nGBUCmMt79v+o/PveAA5MYRQDS9UxwtAipqAAAAABJRU5ErkJggg==');
   --icon-comment: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAJCAYAAAALpr0TAAAAPklEQVQYV2NkAIKZq1b9B9G4QHpYGCMjIUUwzSgKj1y4gGKojYEBnD+QJhLta2xBghwSoKABqQET+BTDFAIAkpAkpgR20LYAAAAASUVORK5CYII=');
-  --stroke-1: #ccc;
-  --stroke-2: #898;
+  --stroke-1: #898;
   --stroke-alert: rgba(0, 0, 0, 0.5);
   --stroke-input: #eee;
-  --stroke-widget-title: #9b9;
+  --stroke-widget-list: #bd8;
+  --stroke-widget-title: #ac6;
   --stroke: #9bb;
   body {
     > div {
@@ -42,7 +44,7 @@
       }
       > header {
         background: {
-          image: url('https://resources.blogblog.com/blogblog/data/rounders4/bg_hdr_bot.jpg');
+          image: url('banner-4.jpg');
           position: 50% 100%;
         }
       }
@@ -57,12 +59,16 @@
               --color: #666;
               --fill-2: #fff;
               &:first-child {
-                --color-2: #ded;
+                --color-2: #dec;
+                --color-link-1: #eee;
+                --color-link-2: #eee;
+                --color-link: #fff;
                 --color: #fff;
                 --fill-2: #9b5;
                 --fill-input: #fff;
-                --stroke-1: #aca;
                 --stroke-input: #fff;
+                --stroke-widget-list: #8a4;
+                --stroke-widget-title: #793;
               }
             }
           }
