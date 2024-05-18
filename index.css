@@ -928,7 +928,7 @@ body > div > nav + div > main > p:not([role=alert]):first-child {
   border-top-color: transparent;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 775px) {
   body > div {
     width: auto;
   }
