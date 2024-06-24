@@ -47,15 +47,18 @@
         <?= self::comments(); ?>
       <?php endif; ?>
     <?php else: ?>
+      <p role="none"></p>
       <article>
         <header>
           <h2>
             <?= i('Error'); ?>
           </h2>
         </header>
-        <p role="status">
-          <?= i('%s does not exist.', 'Page'); ?>
-        </p>
+        <div>
+          <p role="status">
+            <?= i('%s does not exist.', 'Page'); ?>
+          </p>
+        </div>
       </article>
       <nav role="none"></nav>
     <?php endif; ?>

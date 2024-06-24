@@ -42,7 +42,7 @@
           <?= self::pager(); ?>
         <?php endif; ?>
       <?php else: ?>
-        <p role="status">
+        <p role="alert">
           <?php if ($site->has('part')): ?>
             <?= i('No more %s to show.', 'posts'); ?>
           <?php else: ?>
@@ -51,7 +51,7 @@
         </p>
       <?php endif; ?>
     <?php else: ?>
-      <p role="status">
+      <p role="alert">
         <?= i('%s does not exist.', 'Page'); ?>
       </p>
     <?php endif; ?>
