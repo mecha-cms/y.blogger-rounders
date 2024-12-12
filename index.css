@@ -932,9 +932,6 @@ body > div > nav + div > main > p:not([role=alert]):first-child {
   body > div {
     width: auto;
   }
-  body > div > footer {
-    padding: 0;
-  }
   body > div > header + div,
   body > div > nav + div {
     flex-direction: column;

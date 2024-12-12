@@ -1,0 +1,8 @@
+@mixin pass {
+  form {
+    &[name='pass'] {
+      --fill-input: var(--fill-2);
+      --stroke-input: var(--fill-2);
+    }
+  }
+}

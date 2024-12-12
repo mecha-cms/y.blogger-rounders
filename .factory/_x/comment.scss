@@ -1,0 +1,42 @@
+@mixin comment {
+  .comments,
+  .comments-body,
+  .comments-footer,
+  .form-comment {
+    margin-top: 0.75rem;
+  }
+  .comments {
+    h3,
+    h4 {
+      color: var(--color-title);
+      font-size: 125%;
+    }
+  }
+  .comment-header {
+    .comment-author {
+      background: transparent var(--icon-comment) no-repeat 0 50%;
+      color: inherit;
+      font: inherit;
+      font-weight: bold;
+      padding: 0 0 0 16px;
+    }
+  }
+  .form-comment {
+    p {
+      input,
+      select,
+      textarea {
+        + br {
+          + small {
+            color: var(--color-2);
+          }
+        }
+      }
+    }
+  }
+  #comments {
+    border-top: 2px solid var(--stroke-2);
+    margin-top: 0;
+    padding: 15px;
+  }
+}

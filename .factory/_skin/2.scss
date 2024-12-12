@@ -1,0 +1,68 @@
+@mixin v2 {
+  .skin\:2 {
+    --color-1: #fff;
+    --color-2: #888;
+    --color-3: #666;
+    --color-4: #810;
+    --color-button: #fff;
+    --color-input: #333;
+    --color-link-1: #c63;
+    --color-link-2: #666;
+    --color-link: #b30;
+    --color-widget-title: inherit;
+    --color: #333;
+    --face-1: 'Courier New', Courier, monospace;
+    --face: 'Trebuchet MS', Trebuchet, sans-serif;
+    --fill-1: #710;
+    --fill-2: #fff;
+    --fill-3: #eee;
+    --fill-alert: rgba(204, 204, 204, 0.5);
+    --fill-button: #f90;
+    --fill-input: #eee;
+    --fill-mark: #fea;
+    --fill: #ccc;
+    --icon-arrow--small: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAARUlEQVQYV2P8DwRnz55lwAWMjY0ZGM+cOfMfpwqoBIoiKSkpBklJSQZ0kzFMwqYQrghkNzqAmUiaSSBTiHYTNp8yEhNOACSTNLeBInU8AAAAAElFTkSuQmCC');
+    --icon-arrow: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAVUlEQVQoU2NkAIL/Mxn+g2hCgDGdgZGRWMUwwzA1GDcwMBjXQ+RnMWJYit0GPJpwOwmHJoSGNAL+hjqPAg3o3iPoJGQNJHmarGDFE+XgmCE2tkFJAwCMni/z9e+lyAAAAABJRU5ErkJggg==');
+    --icon-author: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAALCAYAAACtWacbAAAApElEQVQYV51QQQqDMBCcxZOHQERyykN8go+Iz1PwC8EXBPKNnEQUPHiSLQlWaGhL6RyWXWbY2VnChb7vWSkFKSW2bcM8z+i6jiKdSoS1luu6fo5YlgVt276KnHNcFMUtOs8TTdP8semnm26fN03yHIaBYyohBMqyxHEc2Pc9pTTGEI3jyFrrROaI4hACaJomrqrqo9u6rqA8eq6OryDvPX87OnIPGUlO8EertJYAAAAASUVORK5CYII=');
+    --icon-comment: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAJCAYAAAALpr0TAAAAPklEQVQYV2NkAIIzZ878B9G4gImJCSMjIUUwzSgKjY2NUQw9e/YsnD+QJhLta2xBghwSoKABqQET+BTDFAIAt8sm+f8pYWwAAAAASUVORK5CYII=');
+    --stroke-1: #aaa;
+    --stroke-alert: rgba(0, 0, 0, 0.5);
+    --stroke-input: #eee;
+    --stroke-widget-list: #ccc;
+    --stroke-widget-title: #bbb;
+    --stroke: #bbb;
+    body {
+      > div {
+        > footer,
+        > header {
+          a {
+            --color-link-1: #fff;
+            --color-link-2: #fff;
+            --color-link: #ccc;
+          }
+        }
+        > header,
+        > nav {
+          + div {
+            > aside {
+              > div {
+                &:first-child {
+                  --color-2: #666;
+                  --color-link-1: #ddd;
+                  --color-link-2: #ddd;
+                  --color-link: #fff;
+                  --color: #222;
+                  --fill-2: #999;
+                  --fill-input: #fff;
+                  --stroke-input: #fff;
+                  --stroke-widget-list: #888;
+                  --stroke-widget-title: #777;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
