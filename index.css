@@ -572,7 +572,7 @@ textarea {
 }
 
 #comments {
-  border-top: 2px solid var(--stroke-2);
+  border-top: 2px solid var(--stroke-1);
   margin-top: 0;
   padding: 15px;
 }
