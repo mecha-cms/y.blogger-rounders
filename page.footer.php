@@ -18,7 +18,7 @@
       echo i('Tags') . ': ';
       if (count($tags = $page->tags ?? []) > 0) {
           $links = [];
-          foreach ($tags as $tag) {
+          foreach ($tags->sort([1, 'title']) as $tag) {
               $links[] = '<a href="' . eat($tag->link) . '" rel="tag">' . $tag->title . '</a>';
           }
           echo implode(', ', $links);
@@ -30,9 +30,11 @@
   echo '</p>';
 
   ?>
-  <p>
-    <a href="<?= eat($page->url . '#comments'); ?>">
-      <?= $page->comments->title; ?>
-    </a>
-  </p>
+  <?php if ($comments = $page->comments): ?>
+    <p>
+      <a href="<?= eat($page->url . '#comments'); ?>">
+        <?= $comments->title; ?>
+      </a>
+    </p>
+  <?php endif; ?>
 </footer>

@@ -941,7 +941,7 @@ body > div > nav + div > main > p:not([role=alert]):first-child {
     width: auto;
   }
 }
-.skin\:1 {
+.skin-1 {
   --color-1: #fff;
   --color-2: #888;
   --color-3: #666;
@@ -974,16 +974,16 @@ body > div > nav + div > main > p:not([role=alert]):first-child {
   --stroke-widget-title: #9b9;
   --stroke: #bbb;
 }
-.skin\:1 body > div > footer a,
-.skin\:1 body > div > footer [role=link],
-.skin\:1 body > div > header a,
-.skin\:1 body > div > header [role=link] {
+.skin-1 body > div > footer a,
+.skin-1 body > div > footer [role=link],
+.skin-1 body > div > header a,
+.skin-1 body > div > header [role=link] {
   --color-link-1: #fff;
   --color-link-2: #fff;
   --color-link: #ded;
 }
-.skin\:1 body > div > header + div > aside > div:first-child,
-.skin\:1 body > div > nav + div > aside > div:first-child {
+.skin-1 body > div > header + div > aside > div:first-child,
+.skin-1 body > div > nav + div > aside > div:first-child {
   --color-2: #9a9;
   --color: #345;
   --fill-2: #cdc;
@@ -992,7 +992,7 @@ body > div > nav + div > main > p:not([role=alert]):first-child {
   --stroke-widget-list: #aca;
 }
 
-.skin\:2 {
+.skin-2 {
   --color-1: #fff;
   --color-2: #888;
   --color-3: #666;
@@ -1025,16 +1025,16 @@ body > div > nav + div > main > p:not([role=alert]):first-child {
   --stroke-widget-title: #bbb;
   --stroke: #bbb;
 }
-.skin\:2 body > div > footer a,
-.skin\:2 body > div > footer [role=link],
-.skin\:2 body > div > header a,
-.skin\:2 body > div > header [role=link] {
+.skin-2 body > div > footer a,
+.skin-2 body > div > footer [role=link],
+.skin-2 body > div > header a,
+.skin-2 body > div > header [role=link] {
   --color-link-1: #fff;
   --color-link-2: #fff;
   --color-link: #ccc;
 }
-.skin\:2 body > div > header + div > aside > div:first-child,
-.skin\:2 body > div > nav + div > aside > div:first-child {
+.skin-2 body > div > header + div > aside > div:first-child,
+.skin-2 body > div > nav + div > aside > div:first-child {
   --color-2: #666;
   --color-link-1: #ddd;
   --color-link-2: #ddd;
@@ -1047,7 +1047,7 @@ body > div > nav + div > main > p:not([role=alert]):first-child {
   --stroke-widget-title: #777;
 }
 
-.skin\:3 {
+.skin-3 {
   --color-1: #fff;
   --color-2: #999;
   --color-3: #666;
@@ -1082,27 +1082,27 @@ body > div > nav + div > main > p:not([role=alert]):first-child {
   --stroke-widget-title: #579;
   --stroke: #bbb;
 }
-.skin\:3 body > div > footer a,
-.skin\:3 body > div > footer [role=link],
-.skin\:3 body > div > header a,
-.skin\:3 body > div > header [role=link] {
+.skin-3 body > div > footer a,
+.skin-3 body > div > footer [role=link],
+.skin-3 body > div > header a,
+.skin-3 body > div > header [role=link] {
   --color-link-1: #fff;
   --color-link-2: #fff;
   --color-link: #ded;
 }
-.skin\:3 body > div > header + div > aside,
-.skin\:3 body > div > nav + div > aside {
+.skin-3 body > div > header + div > aside,
+.skin-3 body > div > nav + div > aside {
   --color-link-1: #fff;
   --color-link-2: #fff;
   --color-link: #9db;
   --color: #fff;
 }
-.skin\:3 body > div > header + div > aside > div,
-.skin\:3 body > div > nav + div > aside > div {
+.skin-3 body > div > header + div > aside > div,
+.skin-3 body > div > nav + div > aside > div {
   --fill-2: #357;
 }
-.skin\:3 body > div > header + div > aside > div:first-child,
-.skin\:3 body > div > nav + div > aside > div:first-child {
+.skin-3 body > div > header + div > aside > div:first-child,
+.skin-3 body > div > nav + div > aside > div:first-child {
   --color-2: #9ca;
   --color-widget-title: #bca;
   --fill-2: #586;
@@ -1110,7 +1110,7 @@ body > div > nav + div > main > p:not([role=alert]):first-child {
   --stroke-widget-title: #7a8;
 }
 
-.skin\:4 {
+.skin-4 {
   --color-1: #fff;
   --color-2: #ab9;
   --color-3: #acb;
@@ -1145,28 +1145,28 @@ body > div > nav + div > main > p:not([role=alert]):first-child {
   --stroke-widget-title: #ac6;
   --stroke: #9bb;
 }
-.skin\:4 body > div > footer a,
-.skin\:4 body > div > footer [role=link],
-.skin\:4 body > div > header a,
-.skin\:4 body > div > header [role=link] {
+.skin-4 body > div > footer a,
+.skin-4 body > div > footer [role=link],
+.skin-4 body > div > header a,
+.skin-4 body > div > header [role=link] {
   --color-link-1: #fff;
   --color-link-2: #fff;
   --color-link: #ded;
 }
-.skin\:4 body > div > header {
+.skin-4 body > div > header {
   background-image: url("banner-4.jpg");
   background-position: 50% 100%;
 }
-.skin\:4 body > div > header + div > aside > div,
-.skin\:4 body > div > nav + div > aside > div {
+.skin-4 body > div > header + div > aside > div,
+.skin-4 body > div > nav + div > aside > div {
   --color-link-1: #798;
   --color-link-2: #798;
   --color-link: #475;
   --color: #666;
   --fill-2: #fff;
 }
-.skin\:4 body > div > header + div > aside > div:first-child,
-.skin\:4 body > div > nav + div > aside > div:first-child {
+.skin-4 body > div > header + div > aside > div:first-child,
+.skin-4 body > div > nav + div > aside > div:first-child {
   --color-2: #dec;
   --color-link-1: #eee;
   --color-link-2: #eee;
